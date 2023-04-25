@@ -53,3 +53,19 @@ form input[type=submit] {
   height: 2px;
   background: linear-gradient(45deg, #ffd900, #f00);
 }
+
+.form-group label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: all 0.5s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.form-group :is(input:not([type=submit]):hover ~ label, input:not([type=submit]):focus ~ label) {
+  top: -10px;
+  font-size: 13px;
+  height: auto;
+  overflow: visible;
+}
