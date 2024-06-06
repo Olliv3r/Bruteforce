@@ -23,7 +23,7 @@ form {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(0, 0, 0, 0.1);
 }
 form h2 {
-  text-align: center;
+  text-align: left;
 }
 form input {
   /*border: 2px solid #000;*/
@@ -60,16 +60,15 @@ form input[type=submit] {
   top: 5px;
   left: 0;
   transition: all 0.5s ease;
-  height: 0;
-  overflow: hidden;
 }
 
-.form-group :is(input:not([type=submit]):hover ~ label, input:not([type=submit]):focus ~ label) {
+.form-group :is(input:not([type=submit]):hover ~ label, input:not([type=submit]):valid ~ label) {
   top: -10px;
   font-size: 13px;
-  height: auto;
-  overflow: visible;
+  font-weight: bold;
 }
+
+/* Dashboard */
 
 .painel {
   width: 90%;
